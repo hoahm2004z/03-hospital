@@ -1,0 +1,45 @@
+{
+  "name": "hospital-backend",
+  "version": "3.0.0",
+  "description": "Hospital Backend Engineering (P3) — Express + Prisma + JWT + Redis + BullMQ",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node src/index.js",
+    "worker": "node src/worker.js",
+    "test": "jest --runInBand --forceExit",
+    "test:unit": "jest --runInBand --forceExit --testPathPattern=tests/unit",
+    "test:integration": "jest --runInBand --forceExit --testPathPattern=tests/integration",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:studio": "prisma studio",
+    "hello": "echo Hospital Backend P3"
+  },
+  "keywords": ["hospital", "express", "prisma", "backend"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "bcrypt": "^6.0.0",
+    "bullmq": "^5.34.5",
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.7",
+    "express": "^5.2.1",
+    "helmet": "^8.0.0",
+    "ioredis": "^5.4.2",
+    "jsonwebtoken": "^9.0.3",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "prisma": "^5.22.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": ["**/tests/**/*.test.js"],
+    "setupFiles": ["<rootDir>/tests/setupEnv.js"],
+    "clearMocks": true
+  }
+}
