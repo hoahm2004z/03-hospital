@@ -1,3 +1,3 @@
 ﻿# team lab
-owner=A-login
-version=2-feature
+owner=merged-AB
+version=3-resolved
